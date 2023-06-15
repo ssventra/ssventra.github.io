@@ -383,13 +383,13 @@ hr.footer-hr
 }
 
 .btn-hover {
-    width: 350px;
+    width:auto;
     font-size: 20px;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
     margin: 20px;
-    height: 75px;
+    height: 55px;
     text-align:center;
     border: none;
     background-size: 300% 100%;
