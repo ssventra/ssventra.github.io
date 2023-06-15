@@ -67,7 +67,7 @@ a.navbar-brand .fa-globe:hover
   max-width: 996px;
 }
 .splash { background:url("https://media.licdn.com/dms/image/C4E16AQEXE_gOY_UE_Q/profile-displaybackgroundimage-shrink_350_1400/0/1635889034320?e=1692230400&v=beta&t=BIExNe14hCqFSM_Rf7QGZJJZW0_w214aNmVZWl8l3EQ")no-repeat fixed center;
-	background-size: 100% 60%;
+	background-size: 100% auto;
   background-color:black;
 	color: #fff;
 }
@@ -194,6 +194,8 @@ section.success a
 {
   color:whitesmoke;
   transition: 0.4s ease;
+  border: .2px solid #fff;
+  margin-right:10px;
 }
 section.success a:hover {
     outline: 0;
@@ -204,6 +206,7 @@ section.success a:hover {
 {
   padding-bottom:2%;
   color:#fff;
+  text-align:center;
 }
 hr.star-light,hr.star-portfolio {
     margin: 25px auto 30px;
@@ -238,7 +241,7 @@ hr.star-light:after {
     color: #fff;
     background-color: rgb(13, 79, 136);
 }
-p.content-text { font-size: 25px;}
+p.content-text { font-size: 20px;}
 
 /* PORTFOLIO */
 .portfolio-container{
