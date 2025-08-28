@@ -3,6 +3,7 @@ Base
 ======================== */
 html { scroll-behavior: smooth; }
 * { box-sizing: border-box; }
+html, body { height: 100%; } /* added for fullscreen sizing */
 
 .container { margin: 0 auto; max-width: 996px; }
 
@@ -429,3 +430,90 @@ Buttons (generic gradient button you had)
 
 /* Misc icon color overrides used elsewhere */
 .fa-user, .fa-at, .fa-phone { color: black; }
+
+/* ========================
+Fullscreen Contact (no page scroll) — ADDED
+Activate by: <body class="contact-fullscreen"> and <section id="contact" class="fullscreen">
+======================== */
+:root {
+  --nav-h: 60px; /* adjust if navbar height differs */
+  --pad: 16px;   /* outer padding around the card */
+}
+
+/* lock scroll only on contact page */
+body.contact-fullscreen { overflow: hidden; }
+
+/* make contact fill viewport minus navbar */
+#contact.fullscreen {
+  min-height: calc(100vh - var(--nav-h));
+  display: grid;
+  place-items: center;
+  padding: var(--pad);
+  padding-top: calc(var(--pad) + var(--nav-h));
+  padding-bottom: var(--pad);
+}
+
+/* card constrained to viewport height */
+#contact.fullscreen .cc-card {
+  width: min(920px, 96vw);
+  max-height: calc(100vh - var(--nav-h) - (var(--pad) * 2));
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* hero | body | footer */
+  overflow: hidden;                   /* no page scroll */
+}
+
+/* keep internals from causing overflow */
+#contact.fullscreen .cc-body { overflow: hidden; }
+#contact.fullscreen .cc-section { padding: 6px; }
+
+/* fit for most laptops (<= 900px tall) */
+@media (max-height: 900px) {
+  #contact.fullscreen .cc-hero { padding: 36px 24px 20px; }
+  #contact.fullscreen .cc-name { font-size: 2rem; }
+  #contact.fullscreen .cc-role { font-size: 1.05rem; }
+  #contact.fullscreen .cc-avatar-wrap { width: 112px; height: 112px; }
+  #contact.fullscreen .cc-avatar { width: 96px; height: 96px; }
+
+  #contact.fullscreen .cc-row { padding: 12px; gap: 14px; }
+  #contact.fullscreen .cc-icon { font-size: 1.6rem; }
+  #contact.fullscreen .cc-value { font-size: 1.4rem; }
+  #contact.fullscreen .cc-btn { font-size: 1.1rem; padding: 10px 14px; }
+
+  #contact.fullscreen .cc-socials a { width: 48px; height: 48px; font-size: 1.4rem; }
+}
+
+/* tighter fit (<= 800px tall) */
+@media (max-height: 800px) {
+  #contact.fullscreen .cc-hero { padding: 28px 20px 16px; }
+  #contact.fullscreen .cc-name { font-size: 1.8rem; }
+  #contact.fullscreen .cc-role { font-size: 1rem; }
+
+  #contact.fullscreen .cc-avatar-wrap { width: 100px; height: 100px; }
+  #contact.fullscreen .cc-avatar { width: 88px; height: 88px; }
+
+  #contact.fullscreen .cc-row { padding: 10px; gap: 12px; grid-template-columns: 38px 1fr auto; }
+  #contact.fullscreen .cc-icon { font-size: 1.4rem; }
+  #contact.fullscreen .cc-value { font-size: 1.25rem; }
+  #contact.fullscreen .cc-btn { font-size: 1rem; padding: 9px 12px; }
+
+  #contact.fullscreen .cc-socials a { width: 44px; height: 44px; font-size: 1.25rem; }
+}
+
+/* ultra-tight (<= 720px tall) */
+@media (max-height: 720px) {
+  /* hide optional rows if marked */
+  #contact.fullscreen .cc-row[aria-hidden="true"] { display: none; }
+
+  #contact.fullscreen .cc-hero { padding: 22px 18px 12px; }
+  #contact.fullscreen .cc-name { font-size: 1.6rem; }
+  #contact.fullscreen .cc-role { font-size: 0.95rem; }
+  #contact.fullscreen .cc-avatar-wrap { width: 92px; height: 92px; }
+  #contact.fullscreen .cc-avatar { width: 82px; height: 82px; }
+
+  #contact.fullscreen .cc-row { padding: 8px; gap: 10px; grid-template-columns: 34px 1fr auto; }
+  #contact.fullscreen .cc-icon { font-size: 1.25rem; }
+  #contact.fullscreen .cc-value { font-size: 1.1rem; }
+  #contact.fullscreen .cc-btn { font-size: 0.95rem; padding: 8px 12px; }
+
+  #contact.fullscreen .cc-socials a { width: 40px; height: 40px; font-size: 1.15rem; }
+}
