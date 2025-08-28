@@ -287,7 +287,7 @@ p.content-text { font-size: 20px;}
 
 /* Contact */
 #contact { background: #0a0a0a; color: #f5f5f5; padding-top: 80px; padding-bottom: 40px;
-  font-size: 18px; /* try 18–19px for a noticeable boost */}
+  font-size: 28px; /* try 18–19px for a noticeable boost */}
 
 
 /* If any elements use px (not rem/em), bump their sizes directly */
