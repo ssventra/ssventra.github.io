@@ -44,29 +44,80 @@
 <!-- Contact form -->
 	<div class="container-fluid contact-me-container content-section" id="contact">
 		<div class="container">
-			<h1 class="intro-text text-center">Contact Me</h1> <br>
-      				<div class="col-sm-12">
-                <div class="text-center">
-					<p id="p1" class="emailid">shrvniventrprgd@gmail.com</p>
-		<div class="button"><button class="btn-hover color-6"onclick="copyToClipboard('#p1')"> Click here to copy email ID: shrvniventrprgd@gmail.com</button> </div>
-                </div> </div>
-				<div class="col-sm-12 col-md-12">
-            	<div class="text-center">
-						<h4 class="text-center" style="color:white">Also, I can be found here</h4> <br>
-				<div class="text-center social-buttons">
-					<a href="https://www.linkedin.com/in/ssventra/" target="blank" class="btn btn-default btn-lg social-button link-linkedin"><i class="fa fa-linkedin"></i>
-						</a>
-          <a href="https://github.com/ssventra" target="blank" class="btn btn-default btn-lg social-button link-instagram"><i class="fa fa-github"></i>	
-          <a href="https://codepen.io/ssventra" target="blank" class="btn btn-default btn-lg social-button link-codepen"><i class="fa fa-codepen"></i>
-						</a>
-						<a href="https://medium.com/@shravaniventrapragada" target="blank" class="btn btn-default btn-lg social-button link-twitter"><i class="fa fa-medium"></i>
-						</a>
+  <h1 class="intro-text text-center" style="margin-bottom: 16px;">Contact Me</h1>
 
-						
-						</a>
-					</div><hr class="footer-hr">
-            
-					</div>
+  <div class="cc-card" role="region" aria-label="Contact card">
+    <div class="cc-hero">
+      <div class="cc-avatar-wrap" aria-hidden="true">
+        <div class="cc-avatar">
+          <!-- Replace with your headshot -->
+          <img src="https://placehold.co/192x192/png" alt="">
+        </div>
+      </div>
+      <div>
+        <h2 class="cc-name">Shravani Ventrapragada</h2>
+        <p class="cc-role">Your Title Here</p>
+      </div>
+    </div>
+
+    <div class="cc-body">
+      <div class="cc-section">
+
+        <!-- Email row (click row or button to copy) -->
+        <div class="cc-row" id="cc-emailRow">
+          <div class="cc-icon" aria-hidden="true"><i class="fa fa-envelope"></i></div>
+          <div class="cc-label">
+            <span class="cc-kicker">Email</span>
+            <span class="cc-value" id="cc-emailValue">shrvniventrprgd@gmail.com</span>
+          </div>
+          <div class="cc-action">
+            <button class="cc-btn" id="cc-copyEmailBtn" aria-label="Copy email address">
+              <i class="fa fa-clone"></i>
+              Copy
+            </button>
+          </div>
+        </div>
+
+        <!-- Website (optional) -->
+        <div class="cc-row">
+          <div class="cc-icon" aria-hidden="true"><i class="fa fa-globe"></i></div>
+          <div class="cc-label">
+            <span class="cc-kicker">Website</span>
+            <a class="cc-value cc-link" href="#" id="cc-websiteLink" target="_blank" rel="noopener">Add your site</a>
+          </div>
+          <div class="cc-action"></div>
+        </div>
+
+        <!-- Location (optional) -->
+        <div class="cc-row" aria-hidden="true">
+          <div class="cc-icon"><i class="fa fa-map-marker"></i></div>
+          <div class="cc-label">
+            <span class="cc-kicker">Location</span>
+            <span class="cc-value">City, Country</span>
+          </div>
+          <div class="cc-action"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cc-footer">
+      <span class="cc-tagline">Let’s build something brilliant.</span>
+      <div class="cc-socials" aria-label="Social links">
+        <a href="https://www.linkedin.com/in/ssventra/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa fa-linkedin"></i></a>
+        <a href="https://github.com/ssventra" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa fa-github"></i></a>
+        <a href="https://codepen.io/ssventra" aria-label="CodePen" target="_blank" rel="noopener"><i class="fa fa-codepen"></i></a>
+        <a href="https://medium.com/@shravaniventrapragada" aria-label="Medium" target="_blank" rel="noopener"><i class="fa fa-medium"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast for copy confirmation -->
+  <div class="cc-toast" id="cc-toast" role="status" aria-live="polite">
+    <i class="fa fa-check"></i>
+    <span>Copied to clipboard</span>
+  </div>
+</div>
 					</div>
 				</div>
 			</div>
