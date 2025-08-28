@@ -204,107 +204,113 @@ Portfolio
 }
 
 /* ========================
-Contact (Dark card + larger type)
+Contact (Dark card + larger type) - MAJOR CHANGES
 ======================== */
 #contact {
   background: #0a0a0a;
   color: #f5f5f5;
-  padding-top: 60px;
-  padding-bottom: 20px;
+  padding-top: 20px !important;
+  padding-bottom: 10px !important;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Type scale and sizing bumps only inside #contact */
-#contact .intro-text { font-size: 2.2rem; }
+#contact .intro-text { font-size: 1.8rem; }
 
 #contact .cc-card {
-  max-width: 720px;
+  max-width: 650px;
+  width: 90%;
   margin: 0 auto;
   background: #111;
   border: 1px solid #232323;
-  border-radius: 16px;
-  box-shadow: 0 8px 28px #00000088;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px #00000088;
   overflow: hidden;
 }
 
 #contact .cc-hero {
-  padding: 36px 28px 20px;
+  padding: 24px 20px 16px;
   display: grid;
   justify-items: center;
   text-align: center;
-  gap: 14px;
+  gap: 12px;
   background: linear-gradient(180deg, #141414 0%, #101010 100%);
   border-bottom: 1px solid #232323;
 }
 
 #contact .cc-avatar-wrap {
-  width: 110px;
-  height: 110px;
+  width: 90px;
+  height: 90px;
   display: grid;
   place-items: center;
   border-radius: 50%;
   background: #0f0f0f;
-  box-shadow: 0 0 0 5px #ffffff14, 0 5px 15px #000000bb;
+  box-shadow: 0 0 0 4px #ffffff14, 0 4px 12px #000000bb;
   border: 1px solid #2e2e2e;
 }
-#contact .cc-avatar { width: 96px; height: 96px; border-radius: 50%; overflow: hidden; }
+#contact .cc-avatar { width: 78px; height: 78px; border-radius: 50%; overflow: hidden; }
 #contact .cc-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-#contact .cc-name { font-size: 2rem; font-weight: 700; margin: 0; color: #f5f5f5; }
-#contact .cc-role { font-size: 1.1rem; margin: 0; color: #b9b9b9; }
+#contact .cc-name { font-size: 1.6rem; font-weight: 700; margin: 0; color: #f5f5f5; }
+#contact .cc-role { font-size: 0.95rem; margin: 0; color: #b9b9b9; }
 
-#contact .cc-body { padding: 8px 16px 4px; }
-#contact .cc-section { padding: 6px; }
+#contact .cc-body { padding: 6px 14px 2px; }
+#contact .cc-section { padding: 4px; }
 
 #contact .cc-row {
   display: grid;
-  grid-template-columns: 40px 1fr auto;
-  gap: 14px;
+  grid-template-columns: 36px 1fr auto;
+  gap: 12px;
   align-items: center;
-  padding: 12px;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 8px;
   transition: background 0.15s ease, transform 0.05s ease;
 }
-#contact .cc-row + .cc-row { margin-top: 4px; }
+#contact .cc-row + .cc-row { margin-top: 3px; }
 #contact .cc-row:hover { background: #171717; }
 #contact .cc-row:active { transform: translateY(1px); }
 
 #contact .cc-icon {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   display: grid;
   place-items: center;
-  border-radius: 10px;
+  border-radius: 8px;
   background: #0f0f0f;
   border: 1px solid #232323;
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
 
-#contact .cc-label { display: grid; gap: 2px; min-width: 0; }
-#contact .cc-kicker { font-size: 0.9rem; letter-spacing: 0.04em; text-transform: uppercase; color: #c7c7c7; }
-#contact .cc-value { font-weight: 600; word-break: break-word; color: #f5f5f5; font-size: 1.6rem; }
+#contact .cc-label { display: grid; gap: 1px; min-width: 0; }
+#contact .cc-kicker { font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; color: #c7c7c7; }
+#contact .cc-value { font-weight: 600; word-break: break-word; color: #f5f5f5; font-size: 1.3rem; }
 
-#contact .cc-action { display: flex; align-items: center; gap: 8px; }
+#contact .cc-action { display: flex; align-items: center; gap: 6px; }
 
-/* Enhanced Aesthetic Copy Button */
+/* COMPLETELY NEW AESTHETIC COPY BUTTON */
 #contact .cc-btn {
-  border: 1px solid #333;
-  background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 50%, #0f0f0f 100%);
-  color: #fff;
-  padding: 10px 14px;
-  border-radius: 10px;
+  position: relative;
+  border: none;
+  background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 8px;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  box-shadow:
-    0 1px 0 #ffffff15 inset,
-    0 6px 15px rgba(0,0,0,.5),
-    0 2px 4px rgba(0,0,0,.3);
-  transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
+  gap: 6px;
+  cursor: pointer;
   overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
 }
 
 #contact .cc-btn::before {
@@ -314,18 +320,17 @@ Contact (Dark card + larger type)
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-  transition: left 0.5s;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transition: left 0.6s ease;
 }
 
 #contact .cc-btn:hover {
-  background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 50%, #1f1f1f 100%);
-  box-shadow:
-    0 1px 0 #ffffff20 inset,
-    0 8px 20px rgba(0,0,0,.6),
-    0 3px 6px rgba(0,0,0,.4);
-  transform: translateY(-2px);
-  border-color: #444;
+  background: linear-gradient(145deg, #3d3d3d, #2a2a2a);
+  transform: translateY(-1px);
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
 
 #contact .cc-btn:hover::before {
@@ -334,39 +339,44 @@ Contact (Dark card + larger type)
 
 #contact .cc-btn:active {
   transform: translateY(0);
-  box-shadow:
-    0 0 0 #0000,
-    0 3px 8px rgba(0,0,0,.4);
-  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 50%, #050505 100%);
+  background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+  box-shadow: 
+    0 1px 4px rgba(0, 0, 0, 0.3),
+    inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#contact .cc-btn i {
+  font-size: 0.85rem;
+  opacity: 0.9;
 }
 
 #contact .cc-link { color: #fff; text-decoration: none; font-weight: 600; }
 #contact .cc-link:hover { text-decoration: underline; }
 
 #contact .cc-footer {
-  padding: 12px 18px 16px;
+  padding: 8px 14px 12px;
   display: grid;
-  gap: 10px;
+  gap: 8px;
   justify-items: center;
   color: #d5d5d5;
-  font-size: 0.88rem;
+  font-size: 0.8rem;
   border-top: 1px solid #232323;
   background: #101010;
 }
 
 /* Smaller social icons (contact-only) */
-#contact .cc-socials { display: flex; gap: 8px; }
+#contact .cc-socials { display: flex; gap: 6px; }
 #contact .cc-socials a {
-  width: 44px;
-  height: 44px;
+  width: 38px;
+  height: 38px;
   display: grid;
   place-items: center;
-  border-radius: 12px;
+  border-radius: 10px;
   color: #fff;
   background: #0e0e0e;
   border: 1px solid #232323;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   transition: transform 0.08s ease, background 0.15s ease, box-shadow 0.2s ease;
   box-shadow: 0 1px 0 #ffffff14;
 }
@@ -380,37 +390,52 @@ Contact (Dark card + larger type)
 
 /* Mobile tuning for contact */
 @media (max-width: 560px) {
-  #contact { font-size: 16px; }
-  #contact .cc-name { font-size: 1.6rem; }
-  #contact .cc-role { font-size: 1rem; }
+  #contact { font-size: 14px; padding-top: 10px !important; }
+  #contact .cc-name { font-size: 1.4rem; }
+  #contact .cc-role { font-size: 0.9rem; }
   #contact .cc-value { font-size: 1.1rem; }
-  #contact .cc-btn { font-size: 1rem; padding: 9px 12px; }
-  #contact .cc-row { grid-template-columns: 36px 1fr auto; padding: 10px; }
-  #contact .cc-avatar-wrap { width: 96px; height: 96px; }
-  #contact .cc-avatar { width: 84px; height: 84px; }
-  #contact .cc-socials a { width: 40px; height: 40px; font-size: 1.2rem; }
+  #contact .cc-btn { font-size: 0.85rem; padding: 7px 10px; }
+  #contact .cc-row { grid-template-columns: 32px 1fr auto; padding: 8px; }
+  #contact .cc-avatar-wrap { width: 80px; height: 80px; }
+  #contact .cc-avatar { width: 70px; height: 70px; }
+  #contact .cc-socials a { width: 34px; height: 34px; font-size: 1.1rem; }
 }
 
 /* ========================
-Footer - Made Thinner
+Footer - MADE MUCH THINNER
 ======================== */
 footer {
   background-color: #2C3E50;
   color: #fff;
-  font-size: 0.8em;
+  font-size: 0.7em;
   text-align: center;
-  padding: 1.5%;
+  padding: 0.8% !important;
+  margin: 0;
 }
-h4.author { letter-spacing: 3px; font-size: 1rem; margin: 8px 0; }
-hr.footer-hr { width: 20%; margin: 8px auto; }
+h4.author { 
+  letter-spacing: 2px; 
+  font-size: 0.9rem; 
+  margin: 4px 0 !important; 
+  font-weight: 400;
+}
+hr.footer-hr { 
+  width: 15%; 
+  margin: 4px auto !important; 
+  border-top: 1px solid #fff;
+}
 
-/* Footer socials */
+/* Footer socials - smaller */
 a.tel, a.tel:hover { text-decoration: none; color: #fff; }
 a.social-button {
   background: #fff;
-  font-size: 32px;
+  font-size: 24px;
   border-radius: 50%;
-  margin: 3px;
+  margin: 2px;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .address-container { display: inline-block; margin: 0 auto; }
 
@@ -454,30 +479,34 @@ Buttons (generic gradient button you had)
 .fa-user, .fa-at, .fa-phone { color: black; }
 
 /* ========================
-Fullscreen Contact (no page scroll) — ENHANCED
-Activate by: <body class="contact-fullscreen"> and <section id="contact" class="fullscreen">
+Fullscreen Contact (no page scroll) — ENHANCED FOR NO SCROLL
 ======================== */
 :root {
   --nav-h: 60px;
-  --pad: 12px;
+  --pad: 8px;
 }
 
 /* lock scroll only on contact page */
-body.contact-fullscreen { overflow: hidden; }
+body.contact-fullscreen { 
+  overflow: hidden !important; 
+  height: 100vh;
+}
 
 /* make contact fill viewport minus navbar */
 #contact.fullscreen {
-  min-height: calc(100vh - var(--nav-h));
-  display: grid;
-  place-items: center;
-  padding: var(--pad);
-  padding-top: calc(var(--pad) + var(--nav-h));
-  padding-bottom: var(--pad);
+  height: calc(100vh - var(--nav-h)) !important;
+  min-height: calc(100vh - var(--nav-h)) !important;
+  max-height: calc(100vh - var(--nav-h)) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: var(--pad) !important;
+  overflow: hidden !important;
 }
 
 /* card constrained to viewport height */
 #contact.fullscreen .cc-card {
-  width: min(800px, 94vw);
+  width: min(700px, 92vw);
   max-height: calc(100vh - var(--nav-h) - (var(--pad) * 2));
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -486,57 +515,46 @@ body.contact-fullscreen { overflow: hidden; }
 
 /* keep internals from causing overflow */
 #contact.fullscreen .cc-body { overflow: hidden; }
-#contact.fullscreen .cc-section { padding: 4px; }
+#contact.fullscreen .cc-section { padding: 3px; }
 
-/* fit for most laptops (<= 900px tall) */
+/* Responsive adjustments for fullscreen */
 @media (max-height: 900px) {
-  #contact.fullscreen .cc-hero { padding: 28px 20px 16px; }
-  #contact.fullscreen .cc-name { font-size: 1.8rem; }
-  #contact.fullscreen .cc-role { font-size: 1rem; }
-  #contact.fullscreen .cc-avatar-wrap { width: 100px; height: 100px; }
-  #contact.fullscreen .cc-avatar { width: 88px; height: 88px; }
-
-  #contact.fullscreen .cc-row { padding: 10px; gap: 12px; }
-  #contact.fullscreen .cc-icon { font-size: 1.4rem; }
-  #contact.fullscreen .cc-value { font-size: 1.3rem; }
-  #contact.fullscreen .cc-btn { font-size: 1rem; padding: 9px 12px; }
-
-  #contact.fullscreen .cc-socials a { width: 42px; height: 42px; font-size: 1.3rem; }
-}
-
-/* tighter fit (<= 800px tall) */
-@media (max-height: 800px) {
-  #contact.fullscreen .cc-hero { padding: 24px 18px 14px; }
-  #contact.fullscreen .cc-name { font-size: 1.6rem; }
-  #contact.fullscreen .cc-role { font-size: 0.95rem; }
-
-  #contact.fullscreen .cc-avatar-wrap { width: 92px; height: 92px; }
-  #contact.fullscreen .cc-avatar { width: 80px; height: 80px; }
-
-  #contact.fullscreen .cc-row { padding: 9px; gap: 10px; grid-template-columns: 36px 1fr auto; }
-  #contact.fullscreen .cc-icon { font-size: 1.3rem; }
-  #contact.fullscreen .cc-value { font-size: 1.15rem; }
-  #contact.fullscreen .cc-btn { font-size: 0.95rem; padding: 8px 11px; }
-
-  #contact.fullscreen .cc-socials a { width: 38px; height: 38px; font-size: 1.2rem; }
-}
-
-/* ultra-tight (<= 720px tall) */
-@media (max-height: 720px) {
-  /* hide optional rows if marked */
-  #contact.fullscreen .cc-row[aria-hidden="true"] { display: none; }
-
-  #contact.fullscreen .cc-hero { padding: 20px 16px 10px; }
+  #contact.fullscreen .cc-hero { padding: 20px 16px 12px; }
   #contact.fullscreen .cc-name { font-size: 1.4rem; }
   #contact.fullscreen .cc-role { font-size: 0.9rem; }
-  #contact.fullscreen .cc-avatar-wrap { width: 84px; height: 84px; }
-  #contact.fullscreen .cc-avatar { width: 72px; height: 72px; }
+  #contact.fullscreen .cc-avatar-wrap { width: 80px; height: 80px; }
+  #contact.fullscreen .cc-avatar { width: 70px; height: 70px; }
+  #contact.fullscreen .cc-row { padding: 8px; gap: 10px; }
+  #contact.fullscreen .cc-icon { font-size: 1.2rem; }
+  #contact.fullscreen .cc-value { font-size: 1.1rem; }
+  #contact.fullscreen .cc-btn { font-size: 0.85rem; padding: 7px 10px; }
+  #contact.fullscreen .cc-socials a { width: 34px; height: 34px; font-size: 1.1rem; }
+}
 
+@media (max-height: 800px) {
+  #contact.fullscreen .cc-hero { padding: 16px 14px 10px; }
+  #contact.fullscreen .cc-name { font-size: 1.3rem; }
+  #contact.fullscreen .cc-role { font-size: 0.85rem; }
+  #contact.fullscreen .cc-avatar-wrap { width: 75px; height: 75px; }
+  #contact.fullscreen .cc-avatar { width: 65px; height: 65px; }
   #contact.fullscreen .cc-row { padding: 7px; gap: 8px; grid-template-columns: 32px 1fr auto; }
-  #contact.fullscreen .cc-icon { font-size: 1.15rem; }
+  #contact.fullscreen .cc-icon { font-size: 1.1rem; }
   #contact.fullscreen .cc-value { font-size: 1rem; }
-  #contact.fullscreen .cc-btn { font-size: 0.9rem; padding: 7px 10px; }
+  #contact.fullscreen .cc-btn { font-size: 0.8rem; padding: 6px 9px; }
+  #contact.fullscreen .cc-socials a { width: 32px; height: 32px; font-size: 1rem; }
+}
 
-  #contact.fullscreen .cc-socials a { width: 36px; height: 36px; font-size: 1.1rem; }
-  #contact.fullscreen .cc-footer { padding: 8px 14px 12px; }
+@media (max-height: 720px) {
+  #contact.fullscreen .cc-row[aria-hidden="true"] { display: none; }
+  #contact.fullscreen .cc-hero { padding: 14px 12px 8px; }
+  #contact.fullscreen .cc-name { font-size: 1.2rem; }
+  #contact.fullscreen .cc-role { font-size: 0.8rem; }
+  #contact.fullscreen .cc-avatar-wrap { width: 70px; height: 70px; }
+  #contact.fullscreen .cc-avatar { width: 60px; height: 60px; }
+  #contact.fullscreen .cc-row { padding: 6px; gap: 6px; grid-template-columns: 30px 1fr auto; }
+  #contact.fullscreen .cc-icon { font-size: 1rem; }
+  #contact.fullscreen .cc-value { font-size: 0.95rem; }
+  #contact.fullscreen .cc-btn { font-size: 0.75rem; padding: 5px 8px; }
+  #contact.fullscreen .cc-socials a { width: 30px; height: 30px; font-size: 0.9rem; }
+  #contact.fullscreen .cc-footer { padding: 6px 10px 8px; }
 }
