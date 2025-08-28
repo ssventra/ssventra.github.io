@@ -286,8 +286,7 @@ p.content-text { font-size: 20px;}
 }
 
 /* Contact */
-#contact { background: #0a0a0a; color: #f5f5f5; padding-top: 80px; padding-bottom: 40px;
-  font-size: 28px; /* try 18–19px for a noticeable boost */}
+#contact { background: #0a0a0a; color: #f5f5f5; padding-top: 80px; padding-bottom: 40px}
 
 
 /* If any elements use px (not rem/em), bump their sizes directly */
@@ -340,7 +339,7 @@ p.content-text { font-size: 20px;}
 .cc-link { color: #fff; text-decoration: none; font-weight: 600; }
 .cc-link:hover { text-decoration: underline; }
 .cc-footer { padding: 16px 20px 22px; display: grid; gap: 14px; justify-items: center; color: #d5d5d5; font-size: 0.92rem; border-top: 1px solid #232323; background: #101010; }
-.cc-tagline { color: #e5e5e5; font-weight: 500; }
+
 .cc-socials { display: flex; gap: 10px; }
 .cc-socials a { width: 58px; height: 58px; display: grid; place-items: center; border-radius: 12px; color: #fff; background: #0e0e0e; border: 1px solid #232323; text-decoration: none; font-size: 1.05rem; transition: transform 0.08s ease, background 0.15s ease, box-shadow 0.2s ease; box-shadow: 0 1px 0 #ffffff14; }
 .cc-socials a:hover { background: #171717; transform: translateY(-1px); }
@@ -367,7 +366,7 @@ a.tel,a.tel:hover
 }
 a.social-button {
 	background: #fff;
-	font-size: 20px;
+	font-size: 40px;
 	border-radius: 50%;
 	margin: 5px;
 }
