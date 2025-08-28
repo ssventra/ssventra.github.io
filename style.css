@@ -343,9 +343,22 @@ p.content-text { font-size: 20px;}
 .cc-socials { display: flex; gap: 10px; }
 .cc-socials a { width: 58px; height: 58px; display: grid; place-items: center; border-radius: 12px; color: #fff; background: #0e0e0e; border: 1px solid #232323; text-decoration: none; font-size: 1.05rem; transition: transform 0.08s ease, background 0.15s ease, box-shadow 0.2s ease; box-shadow: 0 1px 0 #ffffff14; }
 .cc-socials a:hover { background: #171717; transform: translateY(-1px); }
-/ Toast */
-.cc-toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: 20px; background: #f5f5f5; border: 1px solid #eaeaea; color: #111; padding: 12px 16px; border-radius: 12px; width: max-content; max-width: 80vw; box-shadow: 0 10px 24px #00000055; display: none; gap: 10px; align-items: center; z-index: 2000; }
-.cc-toast.show { display: inline-flex; animation: cc-pop 220ms ease; }
+/* Larger social icons — contact section only */
+#contact .cc-socials a {
+  width: 52px;         /* was ~38–42px */
+  height: 52px;
+  font-size: 1.6rem;   /* scales the Font Awesome icon */
+  border-radius: 14px; /* keep it chunky */
+}
+
+/* Optional: bigger on desktop, slightly smaller on mobile */
+@media (max-width: 560px) {
+  #contact .cc-socials a {
+    width: 46px;
+    height: 46px;
+    font-size: 1.4rem;
+  }
+}
 @keyframes cc-pop { from { transform: translate(-50%, 8px); opacity: 0 } to { transform: translate(-50%, 0); opacity: 1 } }
 @media (max-width: 560px) { .cc-row { grid-template-columns: 40px 1fr auto; padding: 10px 10px; } .cc-avatar-wrap { width: 96px; height: 96px; } .cc-avatar { width: 84px; height: 84px; } .cc-name { font-size: 1.45rem; } }
 /* ========================
