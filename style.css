@@ -291,12 +291,12 @@ p.content-text { font-size: 20px;}
 
 /* If any elements use px (not rem/em), bump their sizes directly */
 #contact .intro-text { font-size: 2.4rem; }  /* section heading */
-#contact .cc-name { font-size: 2.2rem; }
+#contact .cc-name { font-size: 2.0rem; }
 #contact .cc-role { font-size: 1.2rem; }
-#contact .cc-value { font-size: 1.90rem; }
+#contact .cc-value { font-size: 1.50rem; }
 #contact .cc-kicker { font-size: 0.95rem; letter-spacing: 0.04em; }
-#contact .cc-btn { font-size: 1.05rem; padding: 12px 16px; }
-#contact .cc-icon { font-size: 1.25rem; }
+#contact .cc-btn { font-size: 1.35rem; padding: 12px 16px; }
+#contact .cc-icon { font-size: 1.9rem; }
 #contact .cc-socials a { font-size: 1.25rem; width: 44px; height: 44px; }
 
 /* Slightly increase card spacing for the larger type */
