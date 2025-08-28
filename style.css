@@ -368,7 +368,7 @@ Footer
 footer {
   background-color: #2C3E50;
   color:  #fff;
-  font-size: 1.5em;
+  font-size: 0.9em;
   text-align: center;
   padding:3%;
 }
@@ -418,7 +418,7 @@ h4.author
 }
 hr.footer-hr
 {
-  width:50%;
+  width:25%;
 }
 .buttons {
     text-align: center;
