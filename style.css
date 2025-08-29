@@ -252,7 +252,7 @@ Contact (Dark card + larger type) - MAJOR CHANGES
   border: 1px solid #2e2e2e;
 }
 #contact .cc-avatar { width: 195px; height: 195px; border-radius: 50%; overflow: hidden; }
-#contact .cc-avatar img { width: 150%; height: 150%; object-fit: cover; display: block; }
+#contact .cc-avatar img { width: 120%; height: 120%; object-fit: cover; display: block; }
 
 #contact .cc-name { font-size: 1.9rem; font-weight: 700; margin: 0; color: #f5f5f5; }
 #contact .cc-role { font-size: 1.3rem; margin: 0; color: #b9b9b9; }
