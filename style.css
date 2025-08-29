@@ -209,7 +209,7 @@ Contact (Dark card + larger type) - MAJOR CHANGES
 #contact {
   background: #0a0a0a;
   color: #f5f5f5;
-  padding-top: 80px !important;
+  padding-top: 65px !important;
   padding-bottom: 10px !important;
   min-height: calc(100vh - 60px);
   display: flex;
@@ -226,7 +226,7 @@ Contact (Dark card + larger type) - MAJOR CHANGES
   margin: 0 auto;
   background: #111;
   border: 1px solid #232323;
-  border-radius: 14px;
+  border-radius: 19px;
   box-shadow: 0 6px 24px #00000088;
   overflow: hidden;
 }
