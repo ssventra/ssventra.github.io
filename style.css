@@ -368,7 +368,7 @@ Contact (Dark card + larger type) - MAJOR CHANGES
   #contact { font-size: 14px; padding-top: 10px !important; }
   #contact .cc-name { font-size: 1.8rem; }
   #contact .cc-role { font-size: 1.1rem; }
-  #contact .cc-value { font-size: 1.1rem; }
+  #contact .cc-value { font-size: 0.8rem; }
   #contact .cc-btn { font-size: 0.85rem; padding: 7px 10px; }
   #contact .cc-row { grid-template-columns: 32px 1fr auto; padding: 8px; }
   #contact .cc-avatar-wrap { width: 80px; height: 80px; }
